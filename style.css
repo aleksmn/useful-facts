@@ -1,18 +1,31 @@
 body {
     margin: 0;
+    font-family: monospace;
+    font-size: 1rem;
+}
+
+img {
+    width: 100%;
 }
 
 .card {
-    /* height: 80vh; */
-    background-color: cyan;
+    /* background-color: cyan; */
+    width: 280px;
+    height: 320px;
+    margin: 20px;
+    box-shadow: 2px 2px 8px 3px rgba(0, 0, 0, 0.11);
+    padding: 10px;
+
 }
 
 .container {
-    
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 200px);
 
-    gap: 1.2em;
-    margin: 4em;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    max-width: 1200px;
+    margin: 20px auto;
+
 }
