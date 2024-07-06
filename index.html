@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,41 +9,55 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
+
 <body>
-    
-    <div class="container">
-        
-        <div class="card">
-            <img src="https://fakeimg.pl/350x200">
-            <h4>Mountains</h4>
-            <p>Lorem ipsum dolor..</p>
+    <div class="wrapper">
+        <h1>Useful Facts</h1>
+
+
+        <div id="filterBtnContainer">
+            <button class="btn filterBtn active" onclick="filterSelection('all')">Show all</button>
+            <button class="btn filterBtn" onclick="filterSelection('land')">Land</button>
+            <button class="btn filterBtn" onclick="filterSelection('water')">Water</button>
+            <button class="btn filterBtn" onclick="filterSelection('life')">Life</button>
         </div>
-        <div class="card">
-            <img src="https://fakeimg.pl/350x200">
-            <h4>Mountains</h4>
-            <p>Lorem ipsum dolor..</p>
-        </div>
-        <div class="card">
-            <img src="https://fakeimg.pl/350x200">
-            <h4>Mountains</h4>
-            <p>Lorem ipsum dolor..</p>
-        </div>
-        <div class="card">
-            <img src="https://fakeimg.pl/350x200">
-            <h4>Mountains</h4>
-            <p>Lorem ipsum dolor..</p>
-        </div>
-        <div class="card">
-            <img src="https://fakeimg.pl/350x200">
-            <h4>Mountains</h4>
-            <p>Lorem ipsum dolor..</p>
-        </div>
-        <div class="card">
-            <img src="https://fakeimg.pl/350x200">
-            <h4>Mountains</h4>
-            <p>Lorem ipsum dolor..</p>
+
+        <div class="container">
+
+            <div class="card" data-type="land">
+                <img src="https://loremflickr.com/350/200/mountains">
+                <h4>Mountains</h4>
+                <p>Lorem ipsum dolor..</p>
+            </div>
+            <div class="card" data-type="water">
+                <img src="https://loremflickr.com/350/200/lake">
+                <h4>Lakes</h4>
+                <p>Lorem ipsum dolor..</p>
+            </div>
+            <div class="card" data-type="water">
+                <img src="https://loremflickr.com/350/200/river">
+                <h4>Rivers</h4>
+                <p>Lorem ipsum dolor..</p>
+            </div>
+            <div class="card" data-type="land">
+                <img src="https://loremflickr.com/350/200/desert">
+                <h4>Deserts</h4>
+                <p>Lorem ipsum dolor..</p>
+            </div>
+            <div class="card" data-type="life">
+                <img src="https://loremflickr.com/350/200/shark">
+                <h4>Sharks</h4>
+                <p>Lorem ipsum dolor..</p>
+            </div>
+            <div class="card" data-type="life">
+                <img src="https://loremflickr.com/350/200/panda">
+                <h4>Pandas</h4>
+                <p>Lorem ipsum dolor..</p>
+            </div>
+
         </div>
 
     </div>
 </body>
+
 </html>
