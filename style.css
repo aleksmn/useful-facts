@@ -3,10 +3,6 @@ body {
     font-family: monospace;
     font-size: 1rem;
 
-    /* Pattern */
-    background-image: radial-gradient(#e4e4e4 1px, #ffffff 1px);
-    background-size: 4px 4px;
-    background-attachment: fixed;
 }
 
 
