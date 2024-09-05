@@ -59,6 +59,21 @@ app.get('/facts', async (request, response) => {
     }
 });
 
+// get one fact by ID
+app.get('/facts/:id', async (request, response) => {
+    try {
+
+        const { id } = request.params;
+ 
+        const fact = await Fact.findById(id);
+        return response.status(200).json(fact);
+
+    } catch (error) {
+        console.log(error.message);
+        response.status(500).send({ message: error.message });
+    }
+});
+
 
 
 mongoose
