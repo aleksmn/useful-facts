@@ -75,6 +75,52 @@ app.get('/facts/:id', async (request, response) => {
 });
 
 
+// update fact
+app.put('/facts/:id',async (request, response) => {
+    try {
+        if (
+            !request.body.title || 
+            !request.body.text || 
+            !request.body.category
+        ) {
+            return response.status(400).send({
+                message: 'Send all required fields: title, text, category'
+            });
+        }
+        const { id } = request.params;
+        const result = await Fact.findByIdAndUpdate(id, request.body);
+
+        if (!result) {
+            return response.status(404).json({ message: 'Fact not found' })
+        }
+
+        return response.status(200).send({ message: 'Fact updated successfully' })
+
+    } catch (error) {
+        console.log(error.message);
+        response.status(500).send({ message: error.message });
+    }
+});
+
+
+
+// Delete fact
+app.delete('/facts/:id', async(request, response) => {
+    try {
+        const { id } = request.params;
+        const result = await Fact.findByIdAndDelete(id);
+
+        if (!result) {
+            return response.status(404).json({ message: 'Fact not found' });
+        }
+
+        return response.status(200).send({ message: 'Fact deleted successfully' });
+    } catch (error) {
+        console.log(error.message);
+        response.status(500).send({ message: error.message });
+    }
+});
+
 
 mongoose
     .connect(mongoDBURL)
