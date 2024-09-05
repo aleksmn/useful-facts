@@ -46,18 +46,18 @@ app.post('/facts', async (request, response) => {
 
 
 // get all facts
-// app.get('/facts', async (request, response) => {
-//     try {
-//         const facts = await Fact.find({});
-//         return response.status(200).json({
-//             count: facts.length,
-//             data: facts
-//         });
-//     } catch (error) {
-//         console.log(error.message);
-//         response.status(500).send({ message: error.message });
-//     }
-// });
+app.get('/facts', async (request, response) => {
+    try {
+        const facts = await Fact.find({});
+        return response.status(200).json({
+            count: facts.length,
+            data: facts
+        });
+    } catch (error) {
+        console.log(error.message);
+        response.status(500).send({ message: error.message });
+    }
+});
 
 
 
