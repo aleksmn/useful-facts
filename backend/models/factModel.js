@@ -12,9 +12,13 @@ const factSchema = mongoose.Schema(
         },
         source: {
             type: String,
-            required: false,
+            required: true,
         },
         category: {
+            type: String,
+            required: true,
+        },
+        image: {
             type: String,
             required: true,
         }

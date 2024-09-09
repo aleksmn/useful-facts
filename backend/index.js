@@ -17,13 +17,17 @@ app.get("/", (request, response) => {
 
 app.post('/facts', async (request, response) => {
     try {
+
         if (!request.body.title || 
             !request.body.text || 
-            !request.body.category
+            !request.body.category ||
+            !request.body.image ||
+            !request.body.source
         ) 
+
         {
             return response.status(400).send({
-                message: 'Send all required fields: title, text, category'
+                message: 'Send all required fields: title, text, category, image, source'
             });
         }
 
@@ -31,18 +35,21 @@ app.post('/facts', async (request, response) => {
             title: request.body.title,
             text: request.body.text,
             category: request.body.category,
-            source: request.body.source
+            source: request.body.source,
+            image: request.body.image
         }
-        // console.log(newFact)
+
+        // создаем факт по модели для добавления в базу данных
         const fact = await Fact.create(newFact);
 
-        return response.status(201).send(fact);
+        return response.status(201).send(fact)
 
     } catch (error) {
         console.log(error.message);
         response.status(500).send({ message: error.message});
     }
 })
+
 
 
 // get all facts
@@ -81,10 +88,12 @@ app.put('/facts/:id',async (request, response) => {
         if (
             !request.body.title || 
             !request.body.text || 
-            !request.body.category
+            !request.body.category ||
+            !request.body.image ||
+            !request.body.source
         ) {
             return response.status(400).send({
-                message: 'Send all required fields: title, text, category'
+                message: 'Send all required fields: title, text, category, image, source'
             });
         }
         const { id } = request.params;
@@ -120,7 +129,6 @@ app.delete('/facts/:id', async(request, response) => {
         response.status(500).send({ message: error.message });
     }
 });
-
 
 mongoose
     .connect(mongoDBURL)
