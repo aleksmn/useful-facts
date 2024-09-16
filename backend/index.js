@@ -2,12 +2,21 @@ import express from "express";
 import { PORT, mongoDBURL } from "./config.js";
 import mongoose from "mongoose";
 import factsRoute from './routes/factsRoute.js';
+import cors from 'cors';
 
 const app = express();
 
 // Middleware for parsing request body
 app.use(express.json());
 
+// Middleware to handle CORS policy
+app.use(
+    cors({
+        origin: 'http://localhost:3000',
+        methods: ['GET', 'POST', 'PUT', 'DELETE'],
+        allowedHeaders:['Content-Type']
+    })
+);
 
 app.get("/", (request, response) => {
     // console.log(request);
