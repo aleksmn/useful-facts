@@ -12,7 +12,7 @@ app.use(express.json());
 // Middleware to handle CORS policy (Cross-Origin Resource Sharing)
 app.use(
     cors({
-        origin: 'http://localhost:3000',
+        origin: 'http://localhost:5173',
         methods: ['GET', 'POST', 'PUT', 'DELETE'],
         allowedHeaders:['Content-Type']
     })
