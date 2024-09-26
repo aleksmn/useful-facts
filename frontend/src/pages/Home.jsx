@@ -25,7 +25,7 @@ const Home = () => {
     return ( 
         <>
             <h1 className="display-4">Useful Facts</h1>
-            <Link to="/facts/create" className="p-1 fs-5">
+            <Link to="/facts/create" className="create-icon">
                 <BsPlusSquare />
             </Link>
 
@@ -53,14 +53,14 @@ const Home = () => {
                                 <td>{fact.source}</td>
                                 <td>{fact.category}</td>
                                 <td>{fact.image}</td>
-                                <td>
-                                    <Link to={`/facts/details/${fact._id}`} className="">
+                                <td className="icons">
+                                    <Link to={`/facts/details/${fact._id}`} className="icons__details">
                                         <BsInfoCircle />
                                     </Link>
-                                    <Link to={`/facts/edit/${fact._id}`} className="">
+                                    <Link to={`/facts/edit/${fact._id}`} className="icons__edit">
                                         <BsPencil />
                                     </Link>
-                                    <Link to={`/facts/delete/${fact._id}`} className="">
+                                    <Link to={`/facts/delete/${fact._id}`}  className="icons__delete">
                                         <BsTrash />
                                     </Link>
                                 </td>

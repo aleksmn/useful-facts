@@ -59,6 +59,32 @@ img {
     color: white;
 }
 
+/****************** ICONS ******************/
+
+.create-icon {
+    font-size: 2rem;
+    display: block;
+    margin: 10px 0;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.icons__details {
+    color: #1a839f;
+}
+
+.icons__edit {
+    color: #1a9f23;
+}
+
+.icons__delete {
+    color: #9f391a;
+}
+
+
 /****************** TABLE ******************/
 table {
     border-collapse: collapse;
