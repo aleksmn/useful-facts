@@ -24,7 +24,7 @@ const Home = () => {
 
     return ( 
         <>
-            <h1 className="display-4">Useful Facts</h1>
+            <h1>Useful Facts</h1>
             <Link to="/facts/create" className="create-icon">
                 <BsPlusSquare />
             </Link>
