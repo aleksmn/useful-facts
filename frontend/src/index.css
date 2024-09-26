@@ -61,27 +61,27 @@ img {
 
 /****************** ICONS ******************/
 
-.create-icon {
-    font-size: 1.5rem;
-    color: #1a9f23;
+.icon {
     display: block;
-    margin: 10px 0;
+    padding: 4px;
 }
 
-
-.icons__details {
-    color: #1a839f;
-    padding-right: 10px;
-}
-
-.icons__edit {
+.icon__create {
+    font-size: 1.6rem;
     color: #1a9f23;
-    padding-right: 10px;
+    padding-left: 0px;
 }
 
-.icons__delete {
+.icon__details {
+    color: #1a839f;
+}
+
+.icon__edit {
+    color: #1a9f23;
+}
+
+.icon__delete {
     color: #9f391a;
-    padding-right: 10px;
 }
 
 
@@ -89,7 +89,6 @@ img {
 table {
     border-collapse: collapse;
     width: 100%;
-    table-layout:fixed;
     word-wrap: break-word;
 
 }

@@ -25,7 +25,7 @@ const Home = () => {
     return ( 
         <>
             <h1>Useful Facts</h1>
-            <Link to="/facts/create" className="create-icon">
+            <Link to="/facts/create" className="icon icon__create">
                 <BsPlusSquare />
             </Link>
 
@@ -48,17 +48,17 @@ const Home = () => {
                             <tr key={fact._id}>
                                 <td>{fact.title}</td>
                                 <td>{fact.text}</td>
-                                <td>{fact.source}</td>
+                                <td><a href={fact.source}>source</a></td>
                                 <td>{fact.category}</td>
-                                <td>{fact.image}</td>
-                                <td className="icons">
-                                    <Link to={`/facts/details/${fact._id}`} className="icons__details">
+                                <td><a href={fact.image}>image</a></td>
+                                <td>
+                                    <Link to={`/facts/details/${fact._id}`} className="icon icon__details">
                                         <BsInfoCircle />
                                     </Link>
-                                    <Link to={`/facts/edit/${fact._id}`} className="icons__edit">
+                                    <Link to={`/facts/edit/${fact._id}`} className="icon icon__edit">
                                         <BsPencil />
                                     </Link>
-                                    <Link to={`/facts/delete/${fact._id}`}  className="icons__delete">
+                                    <Link to={`/facts/delete/${fact._id}`}  className="icon icon__delete">
                                         <BsTrash />
                                     </Link>
                                 </td>
