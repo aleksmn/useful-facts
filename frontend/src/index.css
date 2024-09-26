@@ -62,7 +62,8 @@ img {
 /****************** ICONS ******************/
 
 .create-icon {
-    font-size: 2rem;
+    font-size: 1.5rem;
+    color: #1a9f23;
     display: block;
     margin: 10px 0;
 }
