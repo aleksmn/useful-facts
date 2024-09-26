@@ -36,7 +36,6 @@ const Home = () => {
                 <table className="table">
                     <thead>
                         <tr>
-                            <th>№</th>
                             <th>Title</th>
                             <th>Text</th>
                             <th>Source</th>
@@ -45,9 +44,8 @@ const Home = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {facts.map((fact, index) => (
+                        {facts.map((fact) => (
                             <tr key={fact._id}>
-                                <td>{index + 1}</td>
                                 <td>{fact.title}</td>
                                 <td>{fact.text}</td>
                                 <td>{fact.source}</td>

@@ -68,21 +68,20 @@ img {
     margin: 10px 0;
 }
 
-.icons {
-    display: flex;
-    justify-content: space-evenly;
-}
 
 .icons__details {
     color: #1a839f;
+    padding-right: 5px;
 }
 
 .icons__edit {
     color: #1a9f23;
+    padding-right: 5px;
 }
 
 .icons__delete {
     color: #9f391a;
+    padding-right: 5px;
 }
 
 
@@ -90,12 +89,16 @@ img {
 table {
     border-collapse: collapse;
     width: 100%;
+    table-layout:fixed;
+    word-wrap: break-word;
+
 }
 
 table td,
 table th {
     border: 1px solid #ddd;
     padding: 8px;
+    
 }
 
 table tr:nth-child(even) {
