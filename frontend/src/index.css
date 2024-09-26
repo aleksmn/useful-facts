@@ -64,10 +64,11 @@ img {
 .icon {
     display: block;
     padding: 4px;
+    font-size: 1.2rem;
 }
 
 .icon__create {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     color: #1a9f23;
     padding-left: 0px;
 }

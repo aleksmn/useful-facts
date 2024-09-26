@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import { BsInfoCircle, BsPencil, BsTrash, BsPlusSquare } from 'react-icons/bs'
+import { BsInfoCircle, BsPencil, BsTrash, BsPlusCircle, BsLink45Deg, BsImage } from 'react-icons/bs'
 
 const Home = () => {
     const [facts, setFacts] = useState([]);
@@ -26,7 +26,7 @@ const Home = () => {
         <>
             <h1>Useful Facts</h1>
             <Link to="/facts/create" className="icon icon__create">
-                <BsPlusSquare />
+                <BsPlusCircle />
             </Link>
 
 
@@ -48,9 +48,9 @@ const Home = () => {
                             <tr key={fact._id}>
                                 <td>{fact.title}</td>
                                 <td>{fact.text}</td>
-                                <td><a href={fact.source}>source</a></td>
+                                <td><a href={fact.source}><BsLink45Deg className="icon" /></a></td>
                                 <td>{fact.category}</td>
-                                <td><a href={fact.image}>image</a></td>
+                                <td><a href={fact.image}><BsImage className="icon"/></a></td>
                                 <td>
                                     <Link to={`/facts/details/${fact._id}`} className="icon icon__details">
                                         <BsInfoCircle />
