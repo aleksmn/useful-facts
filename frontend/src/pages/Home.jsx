@@ -36,16 +36,18 @@ const Home = () => {
                 <table className="table">
                     <thead>
                         <tr>
+                            <th>№</th>
                             <th>Title</th>
                             <th>Text</th>
                             <th>Source</th>
                             <th>Category</th>
-                            <th>ImageURL</th>
+                            <th>Image</th>
                         </tr>
                     </thead>
                     <tbody>
-                        {facts.map((fact) => (
+                        {facts.map((fact, index) => (
                             <tr key={fact._id}>
+                                <td>{index+1}</td>
                                 <td>{fact.title}</td>
                                 <td>{fact.text}</td>
                                 <td><a href={fact.source}><BsLink45Deg className="icon" /></a></td>
