@@ -68,7 +68,7 @@ img {
 }
 
 .icon__create {
-    font-size: 1.8rem;
+    font-size: 2rem;
     color: #1a9f23;
     padding-left: 0px;
 }
@@ -83,6 +83,11 @@ img {
 
 .icon__delete {
     color: #9f391a;
+}
+
+.icon__back {
+    color: #0e7a5d;
+    font-size: 2rem;
 }
 
 

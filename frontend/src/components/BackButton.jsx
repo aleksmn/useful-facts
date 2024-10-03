@@ -5,8 +5,8 @@ import PropTypes from 'prop-types';
 const BackButton = ({ destination = '/'}) => {
 
     return ( 
-        <div className="icon">
-            <Link to={destination}>
+        <div >
+            <Link to={destination} className="icon icon__back">
                 <BsArrowLeft />
             </Link>
         </div>
