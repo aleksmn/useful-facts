@@ -11,6 +11,14 @@ body {
     padding: 20px;
 }
 
+
+h1 {
+    text-align: center;
+
+}
+
+
+
 img {
     height: 200px;
     width: 100%;
@@ -116,4 +124,25 @@ table th {
     text-align: left;
     background-color: #21b1d9;
     color: white;
+}
+
+
+/****************** FORM ******************/
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+label, input, textarea {
+    display: block;
+    width: 100%;
+}
+
+textarea  {
+    resize: none;
+}
+
+label {
+    font-weight: bold;
 }
