@@ -27,9 +27,8 @@ const DeleteFact = () => {
     }, [id]);
 
     const handleDeleteFact = () => {
-        const conf = confirm("Are you sure?")
-
-        if (!conf) {return}
+        const answer = confirm("Are you sure?")
+        if (!answer) {return}
 
         setLoading(true);
         axios
