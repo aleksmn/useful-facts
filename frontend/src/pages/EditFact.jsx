@@ -27,7 +27,6 @@ const EditFact = () => {
                 setCategory(response.data.category);
                 setImage(response.data.image);
 
-                console.log(title)
 
                 setLoading(false)
             })

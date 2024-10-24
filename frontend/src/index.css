@@ -59,13 +59,20 @@ img {
 }
 
 .btn:hover {
-    background-color: #ddd;
+    background-color: #767676;
 }
 
 .btn.active {
     background-color: #666;
     color: white;
 }
+
+.btn-danger {
+    background-color: #db432f;
+    color: white;
+}
+
+
 
 /****************** ICONS ******************/
 
